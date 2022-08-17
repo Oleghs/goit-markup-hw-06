@@ -375,6 +375,7 @@ body {
 
   letter-spacing: 0.03em;
   text-decoration-line: underline;
+  text-underline-position: under;
 }
 
 .modal-button-title {
