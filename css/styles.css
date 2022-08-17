@@ -389,6 +389,10 @@ body {
   bottom: 11px;
   left: 12px;
   fill: var(--icon-color);
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .register-field {
@@ -400,6 +404,18 @@ body {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.register-field:focus {
+  border-color: var(--accent-color);
+}
+
+.register-field:focus + .register-icon {
+  fill: var(--accent-color);
 }
 
 .rigister-message {
@@ -416,18 +432,27 @@ body {
   letter-spacing: 0.01em;
 
   outline: transparent;
+
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .register-message::placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
 
+.rigister-message:focus {
+  border-color: var(--accent-color);
+}
 .modal-agree-title {
   font-weight: 400;
   font-size: 14px;
   line-height: calc(24 / 14);
 
   letter-spacing: 0.03em;
+
+  user-select: none;
 }
 
 .modal-agree-link {
@@ -439,7 +464,7 @@ body {
 
   letter-spacing: 0.03em;
   text-decoration-line: underline;
-  /*text-underline-position: under;*/
+  text-underline-position: under;
 
   margin-bottom: 20px;
 }
@@ -451,6 +476,36 @@ body {
   align-items: center;
 
   margin-bottom: 30px;
+}
+
+.register-checkbox:checked + .register-agreement-icon > .icon-uncheck {
+  opacity: 0;
+}
+.icon-uncheck {
+  fill: var(--icon-color);
+
+  transition-property: opacity;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-check {
+  opacity: 0;
+  fill: var(--accent-color);
+
+  transition-property: opacity;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.register-checkbox:checked + .register-agreement-icon > .icon-check {
+  opacity: 1;
+}
+.register-checkbox:focus + .register-agreement-icon {
+  outline: 1px solid var(--accent-color);
+  outline-offset: 2px;
+
+  border-radius: 4px;
 }
 
 .register-button {
@@ -535,6 +590,7 @@ body {
   margin-bottom: 0px;
 
   background-color: var(--light-bgc);
+  z-index: -1;
 }
 
 .work-list {
@@ -859,9 +915,6 @@ body {
   margin-bottom: 57px;
 }
 
-.footer-rigth-side {
-}
-
 .footer-rigth-title {
   font-weight: 700;
   font-size: 14px;
@@ -930,9 +983,6 @@ body {
   text-transform: uppercase;
 
   color: var(--title-hero-color);
-}
-
-.fotter-button-title {
 }
 
 .footer-button {
