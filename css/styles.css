@@ -345,6 +345,14 @@ body {
 
 .button-close-icon {
   fill: #000000;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button-close-icon:hover,
+.button-close-icon:focus {
+  fill: var(--accent-color);
 }
 
 /* ---------------Register-form-окно-регистрации----------------- */
@@ -388,7 +396,7 @@ body {
   position: absolute;
   bottom: 11px;
   left: 12px;
-  fill: var(--icon-color);
+  /*fill: var(--icon-color);*/
 
   transition-property: fill;
   transition-duration: 250ms;
