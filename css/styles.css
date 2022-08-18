@@ -303,8 +303,9 @@ body {
   position: absolute;
   top: 221px;
   left: 50%;
+  top: 50%;
 
-  transform: translatex(-50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
 
   background-color: #fff;
 
@@ -994,6 +995,8 @@ body {
 }
 
 .footer-button {
+  margin-left: 12px;
+
   display: inline-flex;
   gap: 10px;
   justify-content: center;
