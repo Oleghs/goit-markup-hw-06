@@ -980,7 +980,7 @@ body {
 .footer-subscribe {
   display: flex;
   flex-direction: column;
-  margin-left: 47px;
+  margin-left: 23px; /*47*/
 }
 
 .footer-subscribe-title {
