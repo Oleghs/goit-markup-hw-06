@@ -915,10 +915,13 @@ body {
   background-color: var(--hero-footer-color);
 }
 
-.footer-list {
+.footer-left {
   display: flex;
-
   gap: 70px;
+}
+.footer-all {
+  display: flex;
+  gap: 93px;
   padding-top: 63px;
 }
 
