@@ -438,7 +438,7 @@ body {
   border-radius: 4px;
 
   font-size: 12px;
-  line-height: 1.16666;
+  line-height: calc(14 / 12);
   letter-spacing: 0.01em;
 
   outline: transparent;
